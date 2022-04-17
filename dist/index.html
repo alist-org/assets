@@ -3,27 +3,56 @@
   <head>
     <!-- customize head -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="no-referrer">
+    <meta name="referrer" content="no-referrer" />
     <meta name="generator" content="Alist V2" />
     <script src="https://g.alicdn.com/IMM/office-js/1.1.5/aliyun-web-office-sdk.min.js"></script>
+    <script>
+      window.matchMediaBak = window.matchMedia;
+      window.matchMedia = function (e) {
+        let result = window.matchMediaBak(e);
+        if (!result.addEventListener) {
+          result.addEventListener = function (event, listener) {
+            result.addListener(listener);
+          };
+          result.removeEventListener = function (event, listener) {
+            result.removeListener(listener);
+          };
+        }
+        return result;
+      };
+      this.globalThis || (this.globalThis = this);
+    </script>
     <title>Loading...</title>
-    <script type="module" crossorigin src="assets/index.09abe110.js"></script>
-    <link rel="modulepreload" href="assets/vendor.e93814c3.js">
+    <script type="module" crossorigin src="assets/index.78f9d4ac.js"></script>
+    <link rel="modulepreload" href="assets/vendor.03ff3900.js">
+    <script type="module">var __vite_is_dynamic_import_support=false;</script>
+    <script type="module">try{import("_").catch(()=>1);}catch(e){}window.__vite_is_dynamic_import_support=true;</script>
+    <script type="module">!function(){if(window.__vite_is_dynamic_import_support)return;console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
   </head>
   <body>
     <script>
       window.ALIST = {
-        cdn:"/CDN_URL/",
-        api:undefined,
-      }
+        cdn: "/CDN_URL/",
+        api: undefined,
+      };
     </script>
     <div id="root"></div>
     
     <noscript>
-      <strong>We're sorry but alist doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but alist doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong
+      >
     </noscript>
     <!-- customize body -->
+    <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+    <script nomodule id="vite-legacy-polyfill" src="assets/polyfills-legacy.1cd77edc.js"></script>
+    <script nomodule id="vite-legacy-entry" data-src="assets/index-legacy.18b38563.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>
